@@ -1,4 +1,5 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337';
+export const API_URL =
+  process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8082';
 
 /**
  * Given an image return the URL
@@ -7,7 +8,6 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337';
  */
 
 export const fromImageToUrl = (image) => {
-  console.log(image);
   if (!image) {
     return '/vercel.svg';
   }
