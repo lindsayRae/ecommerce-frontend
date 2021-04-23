@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import * as MdIcons from 'react-icons/md';
 
 import AuthContext from '../context/AuthContext';
 
@@ -38,7 +39,10 @@ export default () => {
       <div className={styles.auth}>
         {user ? (
           <Link href='/account'>
-            <a>{user.email}</a>
+            <a>
+              <MdIcons.MdPersonOutline />
+              {/* {user.email} */}
+            </a>
           </Link>
         ) : (
           <Link href='login'>
